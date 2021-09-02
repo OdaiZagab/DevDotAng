@@ -1,0 +1,15 @@
+
+<div class="ListOfHotels" >           
+
+    <section class="wrapper"   >
+        <div class="container">
+            <div class="row" *ngFor="let hotel of hotels">
+ 
+                           <app-hotel-preview-card   [routerLink]="['/Hotels/',hotel?.id]" [hotel]="hotel"></app-hotel-preview-card>
+ 
+              </div>
+          </div>
+    </section>       
+
+</div>
+

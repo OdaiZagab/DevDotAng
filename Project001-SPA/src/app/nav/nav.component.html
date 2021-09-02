@@ -1,0 +1,22 @@
+<nav class="navbar navbar-light bg-light justify-content-between ">
+   <div class="navbar-brand" >
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="addHotel()">Add Hotel <i class="fa fa-plus" aria-hidden="true"></i></button>
+        <button mat-menu-item>Book itno hotel</button>
+      </mat-menu>
+      
+   </div>
+   <a class="navbar-brand"  [routerLink]="['/']">Home</a>
+   <a class="navbar-brand" [routerLink]="['/Hotels']">Hotels</a>
+       <div *ngIf="!loggedIn">
+     
+         <button (click)="login()" type="submit" class="btn btn-primary">login</button>
+
+  </div>
+   <div *ngIf="loggedIn">
+      <button (click)="logout()" type="submit" class="btn btn-primary">logout</button>
+   </div>
+   
+</nav>
+
